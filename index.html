@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./vue.js" async></script>
+    <title>Vuejs</title>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+      </div>
+      <br>
+      <div id="app-2">
+        <span v-bind:title="message">
+          Passez votre souris sur moi pendant quelques secondes
+          pour voir mon titre lié dynamiquement !
+        </span>
+      </div>
+      <br>
+      <div id="app-3">
+        <p v-if="seen">Maintenant vous me voyez</p>
+        <button v-on:click="messageHidden">cacher</button>
+      </div>
+      <br>
+      <div id="app-4">
+        <ol>
+          <li v-for="todo in todos">
+            {{ todo.text }}
+          </li>
+        </ol>
+      </div>
+      <br>
+      <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Message retourné</button>
+      </div>
+      <br>
+      <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+      </div>
+</body>
+</html>
