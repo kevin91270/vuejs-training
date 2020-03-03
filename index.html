@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,41 +11,55 @@
     <script src="./scripts/vue_app4.js" async></script>
     <script src="./scripts/vue_app5.js" async></script>
     <script src="./scripts/vue_app6.js" async></script>
+    <script src="./src/component.js" async></script>
     <title>Vuejs</title>
 </head>
+
 <body>
     <div id="app">
         {{ message }}
-      </div>
-      <br>
-      <div id="app-2">
+    </div>
+    <br>
+    <div id="app-2">
         <span v-bind:title="message">
-          Passez votre souris sur moi pendant quelques secondes
-          pour voir mon titre lié dynamiquement !
+            Passez votre souris sur moi pendant quelques secondes
+            pour voir mon titre lié dynamiquement !
         </span>
-      </div>
-      <br>
-      <div id="app-3">
+    </div>
+    <br>
+    <div id="app-3">
         <p v-if="seen">Maintenant vous me voyez</p>
         <button v-on:click="messageHidden">cacher</button>
-      </div>
-      <br>
-      <div id="app-4">
+    </div>
+    <br>
+    <div id="app-4">
         <ol>
-          <li v-for="todo in todos">
-            {{ todo.text }}
-          </li>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
         </ol>
-      </div>
-      <br>
-      <div id="app-5">
+    </div>
+    <br>
+    <div id="app-5">
         <p>{{ message }}</p>
         <button v-on:click="reverseMessage">Message retourné</button>
-      </div>
-      <br>
-      <div id="app-6">
+    </div>
+    <br>
+    <div id="app-6">
         <p>{{ message }}</p>
         <input v-model="message">
-      </div>
+    </div>
+    <br>
+    <div id="app-7">
+        <ol>
+            <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></todo-item>
+        </ol>
+    </div>
+    <br>
+    <div id="components-count">
+        <counter></counter>
+        <counter></counter>
+    </div>
 </body>
+
 </html>
