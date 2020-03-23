@@ -10,6 +10,7 @@ var app3 = new Vue({
             }
             else (
                 this.seen = false
+                
             )
             console.log(this.seen)
 

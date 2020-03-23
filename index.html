@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="./scripts/vue_app.js" async></script>
     <script src="./scripts/vue_app2.js" async></script>
     <script src="./scripts/vue_app3.js" async></script>
     <script src="./scripts/vue_app4.js" async></script>
     <script src="./scripts/vue_app5.js" async></script>
     <script src="./scripts/vue_app6.js" async></script>
+    <script src="./scripts/vue_app8.js" async></script>
     <script src="./src/component.js" async></script>
     <title>Vuejs</title>
 </head>
@@ -29,7 +31,7 @@
     <br>
     <div id="app-3">
         <p v-if="seen">Maintenant vous me voyez</p>
-        <button v-on:click="messageHidden">cacher</button>
+        <button v-on:click="messageHidden">{{seen ? 'cacher' : 'montrer'}}</button>
     </div>
     <br>
     <div id="app-4">
@@ -60,6 +62,15 @@
         <counter></counter>
         <counter></counter>
     </div>
+    <div id="app-8">
+        <form action="">
+            <div class="col-sm-6">
+                <input v-model="message" type="text">
+            </div>
+        </form>
+        {{message}}
+    </div>
+
 </body>
 
 </html>
